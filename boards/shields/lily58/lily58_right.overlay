@@ -21,7 +21,8 @@
 &pro_micro {
     matrix_transform_right: matrix_transform_right {
         compatible = "zmk,matrix-transform";
-        col-offset = <6>;  // Right half starts at col 6
-        col-pins = <5 4 3 2 1 0>; // remaps GPIO list to logical col numbers
+        col-offset = <6>;
+        // Identity map: GPIO0 → col 6, GPIO5 → col 11
+        col-pins = <0 1 2 3 4 5>;
     };
 };
