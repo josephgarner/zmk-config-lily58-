@@ -6,23 +6,17 @@
 
 #include "lily58.dtsi"
 
-&kscan0 {
-    col-gpios = 
-        <&pro_micro 10 GPIO_ACTIVE_HIGH>, // wired to col 11
-        <&pro_micro 16 GPIO_ACTIVE_HIGH>, // wired to col 10
-        <&pro_micro 14 GPIO_ACTIVE_HIGH>, // col 9
-        <&pro_micro 15 GPIO_ACTIVE_HIGH>, // col 8
-        <&pro_micro 18 GPIO_ACTIVE_HIGH>, // col 7
-        <&pro_micro 19 GPIO_ACTIVE_HIGH>; // col 6
-
-    matrix-transform = <&matrix_transform_right>;
+&default_transform {
+    col-offset = <6>;
 };
 
-&pro_micro {
-    matrix_transform_right: matrix_transform_right {
-        compatible = "zmk,matrix-transform";
-        col-offset = <6>;
-        // Identity map: GPIO0 → col 6, GPIO5 → col 11
-        col-pins = <0 1 2 3 4 5>;
-    };
+&kscan0 {
+    col-gpios
+        = <&pro_micro 10 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        ;
 };
