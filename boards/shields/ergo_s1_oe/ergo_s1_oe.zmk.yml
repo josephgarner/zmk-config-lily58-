@@ -4,8 +4,12 @@ name: Ergo S-1 OE
 type: shield
 url: https://github.com/wizarddata/Ergo-S-1
 requires: [pro_micro]
+exposes: [i2c_oled]
 features:
   - keys
+  - - studio
 siblings:
   - ergo_s1_oe_left
   - ergo_s1_oe_right
+  - ergo_s1_oe_left_peripheral
+  - ergo_s1_oe_dongle_pro_micro
