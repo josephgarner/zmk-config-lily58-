@@ -8,15 +8,9 @@
 
 #include "ergo_layout.dtsi"
 
-&physical_layout0 {
-    transform = <&default_transform>;
-};
-
-
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
 				zmk,physical-layout = &physical_layout0;
     };
 
@@ -55,4 +49,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)         RC(3,6) RC(3,7)     RC(3
 
     };
 
+};
+
+&physical_layout0 {
+    transform = <&default_transform>;
 };
