@@ -11,7 +11,7 @@
 / {
     chosen {
         zephyr,display = &oled;
-        zmk,kscan = &mock_kscan;
+        zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
     };
 
@@ -34,7 +34,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)         RC(3,6) RC(3,7)     RC(3
         >;
     };
 
-    mock_kscan: mock_kscan_0 {
+    kscan0: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
