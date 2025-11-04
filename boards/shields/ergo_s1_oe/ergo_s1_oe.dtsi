@@ -8,6 +8,11 @@
 
 #include "ergo_layout.dtsi"
 
+&physical_layout0 {
+    transform = <&matrix_transform0>;
+};
+
+
 / {
     chosen {
         zmk,kscan = &kscan0;
